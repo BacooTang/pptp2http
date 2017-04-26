@@ -1,4 +1,3 @@
+git clone https://github.com/BacooTang/pptp2http.git
+
 docker build -t bacootang/pptp2http . && docker run --device /dev/ppp --cap-add=net_admin -p 10000:9393 bacootang/pptp2http bash /init.sh 221.2.207.205 3001000002 3ttyaydd
-
-
-curl -x 127.0.0.1:10000 'http://fucku.sh.1251900689.clb.myqcloud.com/ip'
