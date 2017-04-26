@@ -1,4 +1,4 @@
-#FROM hub.c.163.com/public/ubuntu:14.04
+FROM hub.c.163.com/public/ubuntu:14.04
 FROM ubuntu:trusty
 MAINTAINER bacootang@gmail.com
 #RUN rm /etc/apt/sources.list
