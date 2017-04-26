@@ -1,3 +1,3 @@
 git clone https://github.com/BacooTang/pptp2http.git
 
-docker build -t bacootang/pptp2http . && docker run --device /dev/ppp --cap-add=net_admin -p 10000:9393 bacootang/pptp2http bash /init.sh 221.2.207.205 3001000002 3ttyaydd
+docker build -t bacootang/pptp2http . && docker run --device /dev/ppp --cap-add=net_admin -p 10000:9393 bacootang/pptp2http bash /init.sh 7482782.ros2.chengshu.com jw1 1
