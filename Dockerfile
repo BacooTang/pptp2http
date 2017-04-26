@@ -1,4 +1,5 @@
-FROM ubuntu:trusty
+#FROM ubuntu:trusty
+FROM hub.c.163.com/public/ubuntu:14.04
 MAINTAINER bacootang@gmail.com
 RUN echo "deb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted" >> /etc/apt/sources.list && \
     apt-get update && \
