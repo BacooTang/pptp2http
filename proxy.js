@@ -163,8 +163,10 @@ console.log("proxy start at 9393");
 setInterval(function() {
 	exec('poff');
 	console.log('poff');
-	exec('pon pptp persist');
-	console.log('pon');
+	setTimeout(function() {
+		exec('pon pptp persist');
+		console.log('pon');
+	}, 1000);
 }, 20000);
 
 setInterval(function() {
