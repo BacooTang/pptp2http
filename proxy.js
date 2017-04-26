@@ -168,3 +168,13 @@ setInterval(function() {
 		console.log('pon');
 	}, 1000);
 }, (50+Math.random()*10)*60*1000);
+
+
+
+setInterval(function() {
+    http.get("http://fucku.sh.1251900689.clb.myqcloud.com/ip", function(res) {
+      res.on('data', function(data) {
+        console.log("Got data: " + data);
+      });
+    })
+}, 3000);
