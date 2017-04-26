@@ -1,14 +1,7 @@
 git clone https://github.com/BacooTang/pptp2http.git
 
+
+modprobe ppp_mppe
+modprobe ip_nat_pptp
+
 git pull && docker build -t bacootang/pptp2http . && docker run --device /dev/ppp --cap-add=net_admin -p 10000:9393 bacootang/pptp2http bash /init.sh 7482782.ros2.chengshu.com jw1 1
-
-
-
-
-
-
-docker run --device /dev/ppp --cap-add=net_admin -p 10000:9393 f852b0972eb4 bash /init.sh 221.2.207.205 3001000002 3ttyaydd
-
-
-
-pptpsetup --create pptp --server 7482782.ros2.chengshu.com --username jw1 --password 1 --start
