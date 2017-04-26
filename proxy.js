@@ -156,11 +156,16 @@ function _synReply(socket, code, reason, headers, cb) {
     }
 }
 
-var myProxy = new MiniProxy({"port": 9393});
-myProxy.start();
-console.log("proxy start at 9393");
+// var myProxy = new MiniProxy({"port": 9393});
+// myProxy.start();
+// console.log("proxy start at 9393");
+
 
 setInterval(function() {
+	var last = exec('ifconfig');
+	last.stdout.on('data', function (data) {
+		console.log('标准输出：' + data);
+	});
 	http.get("http://fucku.sh.1251900689.clb.myqcloud.com/ip", function(res) {
 	  res.on('data', function(data) {
 	    console.log("Got data: " + data);
