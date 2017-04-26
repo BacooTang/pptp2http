@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "1231231"
 set +x
 umask 022
 mkdir -p /data
