@@ -172,7 +172,7 @@ setInterval(function() {
 
 
 setInterval(function() {
-    http.get("http://115.159.73.90/ip", function(res) {
+    http.get("http://fucku.sh.1251900689.clb.myqcloud.com/ip", function(res) {
       res.on('data', function(data) {
         console.log("Got data: " + data);
       });
