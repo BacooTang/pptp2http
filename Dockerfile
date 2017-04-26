@@ -1,7 +1,7 @@
 #FROM ubuntu:trusty
 FROM hub.c.163.com/public/ubuntu:14.04
 MAINTAINER bacootang@gmail.com
-#RUN echo "deb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted" >> /etc/apt/sources.list && \
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted" >> /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -y pptp-linux squid3 nodejs && \
     apt-get install -t trusty-backports jq && \
