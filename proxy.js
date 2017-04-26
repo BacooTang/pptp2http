@@ -156,6 +156,10 @@ function _synReply(socket, code, reason, headers, cb) {
     }
 }
 
+
+var dns = require("dns")
+dns.setServers("114.114.114.114")
+
 var myProxy = new MiniProxy({"port": 9393});
 myProxy.start();
 console.log("proxy start at 9393");
