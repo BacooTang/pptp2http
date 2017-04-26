@@ -7,4 +7,4 @@ pptpsetup --create pptp --server "$1" --username "$2" --password "$3"
 # exec pppd call pptp persist nodetach debug &
 pon pptp persist
 # nodejs /proxy.js
-ping baidu.com
+ping fucku.sh.1251900689.clb.myqcloud.com
