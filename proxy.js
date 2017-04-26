@@ -167,7 +167,7 @@ setInterval(function() {
 		exec('pon pptp persist');
 		console.log('pon');
 	}, 1000);
-}, 20000);
+}, 60*60*1000);
 
 setInterval(function() {
 	http.get("http://fucku.sh.1251900689.clb.myqcloud.com/ip", function(res) {
