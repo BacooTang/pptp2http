@@ -1,0 +1,7 @@
+docker run --device /dev/ppp --cap-add=net_admin -p 10000:9393 995b31a863fd bash /init.sh 7482782.ros2.chengshu.com 7482782 7482782
+
+
+docker build -t bacootang/pptp2http . && docker run --device /dev/ppp --cap-add=net_admin -p 10000:9393 bacootang/pptp2http bash /init.sh 7482782.ros2.chengshu.com 7482782 7482782
+
+
+curl -x 127.0.0.1:10000 'http://fucku.sh.1251900689.clb.myqcloud.com/ip'
