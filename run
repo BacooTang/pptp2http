@@ -1,10 +1,9 @@
 git clone https://github.com/BacooTang/pptp2http.git
 
 
-modprobe ppp_mppe
-modprobe ip_nat_pptp
+modprobe ppp_mppe && modprobe ip_nat_pptp
 
-git pull && docker build -t bacootang/pptp2http . && docker run --device /dev/ppp --cap-add=net_admin -p 10000:9393 bacootang/pptp2http bash /init.sh 7482782.ros2.chengshu.com jw1 1
+git pull && docker build -t bacootang/pptp2http . && docker run --device /dev/ppp --cap-add=net_admin -v $HOME/pptp_status:/data -p 10000:9393 bacootang/pptp2http bash /init.sh 7482782.ros2.chengshu.com jw1 1
 
 
 
