@@ -7,5 +7,5 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted
     ln -sf /bin/true /sbin/modprobe && \
     echo "200 squid" >> /etc/iproute2/rt_tables
 ADD init.sh /
-#ADD proxy.js /
-#ADD 000ppp0 /etc/ppp/ip-up.d/
+ADD proxy.js /
+ADD 000ppp0 /etc/ppp/ip-up.d/
