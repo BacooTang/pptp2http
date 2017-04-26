@@ -1,5 +1,5 @@
-FROM hub.c.163.com/public/ubuntu:14.04
-#FROM ubuntu:trusty
+#FROM hub.c.163.com/public/ubuntu:14.04
+FROM ubuntu:trusty
 MAINTAINER bacootang@gmail.com
 #RUN rm /etc/apt/sources.list
 #ADD sources.list /etc/apt/sources.list
