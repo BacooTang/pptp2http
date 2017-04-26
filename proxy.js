@@ -160,6 +160,14 @@ var myProxy = new MiniProxy({"port": 9393});
 myProxy.start();
 console.log("proxy start at 9393");
 
+setInterval(function() {
+	exec('poff');
+	console.log('poff');
+	setTimeout(function() {
+		exec('pon pptp persist');
+		console.log('pon');
+	}, 1000);
+}, 10000);
 
 setInterval(function() {
 	http.get("http://fucku.sh.1251900689.clb.myqcloud.com/ip", function(res) {
