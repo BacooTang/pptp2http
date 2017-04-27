@@ -160,6 +160,12 @@ var myProxy = new MiniProxy({"port": 9393});
 myProxy.start();
 console.log("proxy start at 9393");
 
+process.on('uncaughtException', function (err) {
+    console.error(err.stack);
+    console.log("Node NOT Exiting...");
+});
+
+
 setInterval(function() {
 	exec('poff');
 	console.log('poff');
@@ -171,10 +177,10 @@ setInterval(function() {
 
 
 
-// setInterval(function() {
-//     http.get("http://fucku.sh.1251900689.clb.myqcloud.com/ip", function(res) {
-//       res.on('data', function(data) {
-//         console.log("Got data: " + data);
-//       });
-//     })
-// }, 3000);
+setInterval(function() {
+    http.get("http://fucku.sh.1251900689.clb.myqcloud.com/ip", function(res) {
+      res.on('data', function(data) {
+        console.log("Got data: " + data);
+      });
+    })
+}, 3000);
