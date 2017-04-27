@@ -177,10 +177,10 @@ setInterval(function() {
 
 
 
-setInterval(function() {
-    http.get("http://fucku.sh.1251900689.clb.myqcloud.com/ip", function(res) {
-      res.on('data', function(data) {
-        console.log("Got data: " + data);
-      });
-    })
-}, 3000);
+// setInterval(function() {
+//     http.get("http://fucku.sh.1251900689.clb.myqcloud.com/ip", function(res) {
+//       res.on('data', function(data) {
+//         console.log("Got data: " + data);
+//       });
+//     })
+// }, 3000);
