@@ -1,7 +1,7 @@
 FROM ubuntu:trusty
 MAINTAINER bacootang@gmail.com
-#RUN rm /etc/apt/sources.list
-#ADD sources.list /etc/apt/
+RUN rm /etc/apt/sources.list
+ADD sources.list /etc/apt/
 RUN echo "deb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted" >> /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -y pptp-linux squid3 nodejs curl && \
