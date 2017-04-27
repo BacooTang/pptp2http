@@ -22,5 +22,5 @@ ip route del 0.0.0.0/1 dev $1
 ip route del 128.0.0.0/1 dev $1
 _EOF_
 
-exec pppd call pptp persist nodetach debug &
+exec pppd call pptp persist nodetach &
 node /proxy.js
