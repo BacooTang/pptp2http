@@ -8,6 +8,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted
     apt-get install -t trusty-backports jq && \
     ln -sf /bin/true /sbin/modprobe && \
     echo "200 squid" >> /etc/iproute2/rt_tables
+RUN apt-get install npm && npm install n pm2 -g && n stable
 ADD init.sh /
 ADD proxy.js /
 ADD 000ppp0 /etc/ppp/ip-up.d/
